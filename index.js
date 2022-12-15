@@ -1,3 +1,4 @@
+require("dotenv").config()
 const express = require("express")
 const app = express()
 const mysql = require("mysql")
@@ -5,12 +6,16 @@ const cors = require("cors")
 const bodyParser = require("body-parser");
 const auth = require('./auth')
 const port = process.env.PORT || 3002
+const host = process.env.DB_host
+const user = process.env.DB_user
+const password = process.env.DB_password
+const database = process.env.DB_database
 
 const db = mysql.createPool({
-    host:'us-cdbr-east-06.cleardb.net',
-    user: 'b08101bb327625',
-    password:'eab56466',
-    database:'heroku_4d982bcb97c8910',
+    host,
+    user,
+    password,
+    database,
 })
 
 
