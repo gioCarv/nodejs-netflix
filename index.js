@@ -6,7 +6,6 @@ const bodyParser = require("body-parser");
 const auth = require('./auth')
 const port = process.env.PORT || 3002
 
-mysql://b08101bb327625:eab56466@us-cdbr-east-06.cleardb.net/heroku_4d982bcb97c8910?reconnect=true
 const db = mysql.createPool({
     host:'us-cdbr-east-06.cleardb.net',
     user: 'b08101bb327625',
