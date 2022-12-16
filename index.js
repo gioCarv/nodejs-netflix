@@ -41,7 +41,7 @@ app.post('/signup',(req, res) => {
     "SELECT email from users "
     db.query(sqlSelect, (err,result) =>{
         if (err) console.log(err)      
-        res.send('Olá Mundo')
+        res.send(result)
     })
 })
 
