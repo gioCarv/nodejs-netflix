@@ -36,15 +36,6 @@ app.post('/signup',(req, res) => {
 })
 
 
- app.get( '/', (req,res)=> {
-    const sqlSelect = 
-    "SELECT email from users "
-    db.query(sqlSelect, (err,result) =>{
-        if (err) console.log(err)      
-        res.send(console.log(result))
-    })
-})
-
  app.get( '/get/', (req,res)=> {
     const sqlSelect = 
     "SELECT email from users "
