@@ -1,5 +1,4 @@
 require("dotenv").config()
-const {authSecret} = require('./.env')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const mysql = require("mysql")
@@ -7,6 +6,7 @@ const host = process.env.DB_host
 const user = process.env.DB_user
 const password = process.env.DB_password
 const database = process.env.DB_database
+const authSecret = process.env.authSecret
 const db = mysql.createPool({
     host,
     user,
